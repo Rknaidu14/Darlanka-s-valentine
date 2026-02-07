@@ -3,43 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Valentine Quiz 💘</title>
+  <title>Valentine Quiz 💘 - Page 1</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="card">
-    <div class="hearts" aria-hidden="true"></div>
+    <!-- Envelope Image -->
+    <div id="envelope" class="envelope" onclick="openEnvelope()">
+      <img src="envelope.png" alt="Envelope" />
+    </div>
 
-    <h1 id="title">Valentine Quiz 💖</h1>
-    <p id="subtitle">Answer a few cute questions 😊</p>
-
-    <section id="quiz">
-      <div class="progress">
-        <div class="bar" id="bar"></div>
-      </div>
-
-      <h2 id="question">Loading...</h2>
-
-      <div class="options" id="options"></div>
-
-      <div class="nav">
-        <button id="back" class="secondary" disabled>Back</button>
-        <button id="skip" class="secondary">Skip</button>
-      </div>
-    </section>
-
-    <section id="result" class="hidden">
-      <h2 id="resultTitle"></h2>
-      <p id="resultText"></p>
-
-      <div class="resultActions">
-        <button id="restart">Restart 🔁</button>
-        <button id="copy">Copy result 📋</button>
-      </div>
-
-      <p class="small" id="copied" aria-live="polite"></p>
-    </section>
+    <!-- Hidden Message -->
+    <div id="message" class="hidden">
+      <h1>Welcome to the Valentine's Day Quiz 💌</h1>
+      <p>Click Next to continue</p>
+      <button onclick="goToPage2()">Next</button>
+    </div>
   </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
 
   <script src="script.js"></script>
 </body>
