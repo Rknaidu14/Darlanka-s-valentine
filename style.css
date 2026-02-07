@@ -1,0 +1,110 @@
+* { box-sizing: border-box; }
+
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family: system-ui, -apple-system, Arial, sans-serif;
+  background: radial-gradient(circle at top, #ffe6ee, #ffd1dc, #ffc2d1);
+  padding: 18px;
+}
+
+.card{
+  width: min(520px, 96vw);
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(255,255,255,.6);
+  border-radius: 22px;
+  padding: 22px 18px;
+  position: relative;
+  overflow:hidden;
+  box-shadow: 0 18px 50px rgba(0,0,0,.12);
+}
+
+h1{ margin: 0 0 6px; font-size: 28px; }
+#subtitle{ margin: 0 0 16px; opacity: .75; }
+
+.progress{
+  height: 10px;
+  background: rgba(0,0,0,.06);
+  border-radius: 999px;
+  overflow:hidden;
+  margin: 10px 0 14px;
+}
+.bar{
+  height: 100%;
+  width: 0%;
+  background: rgba(255, 82, 130, .9);
+  transition: width .25s ease;
+}
+
+h2{
+  margin: 0 0 14px;
+  font-size: 22px;
+}
+
+.options{
+  display:grid;
+  gap: 10px;
+}
+
+button{
+  border: none;
+  border-radius: 14px;
+  padding: 12px 14px;
+  font-size: 16px;
+  cursor: pointer;
+  background: rgba(255, 82, 130, .95);
+  color: white;
+  transition: transform .12s ease, filter .12s ease;
+  position: relative;
+}
+
+button:hover{ transform: translateY(-1px); filter: brightness(1.03); }
+button:active{ transform: translateY(0px) scale(.99); }
+
+.secondary{
+  background: rgba(0,0,0,.07);
+  color: rgba(0,0,0,.78);
+}
+
+.nav{
+  display:flex;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.hidden{ display:none; }
+
+.resultActions{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.small{ margin-top: 10px; font-size: 13px; opacity: .8; }
+
+.hearts::before, .hearts::after{
+  content:"💖 💘 💝 💗 💞";
+  position:absolute;
+  top: 10px;
+  left: -20px;
+  right: -20px;
+  font-size: 18px;
+  opacity: .35;
+  white-space: nowrap;
+  animation: float 8s linear infinite;
+}
+.hearts::after{
+  top:auto;
+  bottom: 10px;
+  animation-duration: 10s;
+  opacity: .25;
+}
+
+@keyframes float{
+  0% { transform: translateX(-10%); }
+  100% { transform: translateX(10%); }
+}
